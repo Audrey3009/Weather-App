@@ -17,6 +17,7 @@
     "axios": "^1.7.2",
     "craco-less": "^3.0.1",
     "css-select": "^5.1.0",
+    "dotenv": "^16.4.5",
     "glob": "^10.4.1",
     "lru-cache": "^10.2.2",
     "nth-check": "^2.1.1",
