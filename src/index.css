@@ -39,3 +39,9 @@ body {
   border-radius: 10px; /* Tùy chọn: thêm bo tròn các góc */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tùy chọn: thêm đổ bóng */
 }
+
+@media (max-width: 620px) {
+  .responsive-button {
+    margin-top: 10px;
+  }
+}

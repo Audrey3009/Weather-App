@@ -90,7 +90,7 @@ const Weather = () => {
                 style={{ width: 300 }}
               />
             </Form.Item>
-            <Form.Item>
+            <Form.Item className="responsive-button">
               <Button
                 type="primary"
                 htmlType="submit"
