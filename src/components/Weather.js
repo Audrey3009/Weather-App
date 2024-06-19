@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import { Input, Button, Form, Typography, Card } from "antd";
+import { Input, Button, Form, Typography, Card, Spin } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import {
   FaSun,
@@ -19,10 +19,12 @@ const Weather = () => {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 
   const getWeather = async (e) => {
+    setLoading(true);
     try {
       const response = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
@@ -33,6 +35,7 @@ const Weather = () => {
       setError("City not found. Please enter again");
       setWeather(null);
     }
+    setLoading(false);
   };
 
   const getWeatherIcon = (weatherCondition) => {
@@ -95,8 +98,9 @@ const Weather = () => {
                 type="primary"
                 htmlType="submit"
                 icon={<SearchOutlined />}
+                disabled={loading}
               >
-                Check Weather
+                {loading ? <Spin /> : "Check Weather"}
               </Button>
             </Form.Item>
           </Form>
