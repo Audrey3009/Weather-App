@@ -40,8 +40,57 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tùy chọn: thêm đổ bóng */
 }
 
-@media (max-width: 620px) {
+.responsive-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 576px) {
   .responsive-button {
-    margin-top: 10px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+  .content {
+    padding: 1.5rem;
+  }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 576px) {
+  .app-container {
+    padding: 0.5rem;
+  }
+  .content {
+    padding: 1rem;
+    width: 90vw; /* Đảm bảo nội dung không quá rộng trên màn hình nhỏ */
+  }
+
+  .responsive-button {
+    width: 100%;
+  }
+
+  .responsive-button button {
+    width: 100%; /* Nút bấm chiếm toàn bộ chiều rộng trên màn hình nhỏ */
+  }
+}
+
+/* Additional adjustments for very small devices (Samsung Galaxy, etc.) */
+@media (max-width: 360px) {
+  .app-container {
+    padding: 0.25rem;
+  }
+  .content {
+    padding: 0.5rem;
+    width: 95vw; /* Đảm bảo nội dung không quá rộng trên màn hình rất nhỏ */
+  }
+
+  .responsive-button {
+    margin-top: 5px;
   }
 }
