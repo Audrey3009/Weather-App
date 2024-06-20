@@ -46,6 +46,8 @@ body {
   margin-top: 10px;
 }
 
+/* Responsive adjustments for mobile devices */
+
 @media (min-width: 576px) {
   .responsive-button {
     margin-top: 0;
@@ -61,7 +63,6 @@ body {
   }
 }
 
-/* Responsive adjustments for mobile devices */
 @media (max-width: 576px) {
   .app-container {
     padding: 0.5rem;
@@ -80,7 +81,7 @@ body {
   }
 }
 
-/* Additional adjustments for very small devices (Samsung Galaxy, etc.) */
+/* Additional adjustments for very small devices */
 @media (max-width: 360px) {
   .app-container {
     padding: 0.25rem;
